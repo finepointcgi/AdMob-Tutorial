@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://admob-lib/admob.gd" type="Script" id=1]
+[ext_resource path="res://SceneController.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AdMob" type="Node" parent="."]
+script = ExtResource( 1 )
+banner_id = "ca-app-pub-3940256099942544/6300978111"
+interstitial_id = "ca-app-pub-3940256099942544/8691691433"
+rewarded_id = "ca-app-pub-3940256099942544/5224354917"
+is_personalized = false
+
+[node name="Banner Ad" type="Button" parent="."]
+margin_left = 127.0
+margin_top = 322.0
+margin_right = 447.0
+margin_bottom = 366.0
+rect_pivot_offset = Vector2( -920.328, 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reward Video" type="Button" parent="."]
+margin_left = 127.0
+margin_top = 462.448
+margin_right = 447.0
+margin_bottom = 506.448
+rect_pivot_offset = Vector2( -920.328, 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 31.7142
+margin_top = 632.773
+margin_right = 296.714
+margin_bottom = 672.773
+rect_scale = Vector2( 2.24116, 2.56381 )
+text = "Reward Amount"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 277.877
+margin_top = 635.794
+margin_right = 542.877
+margin_bottom = 675.794
+rect_scale = Vector2( 2.24116, 2.56381 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="rewarded" from="AdMob" to="." method="_on_AdMob_rewarded"]
+[connection signal="button_down" from="Banner Ad" to="." method="_on_Banner_Ad_button_down"]
+[connection signal="button_down" from="Reward Video" to="." method="_on_Reward_Video_button_down"]

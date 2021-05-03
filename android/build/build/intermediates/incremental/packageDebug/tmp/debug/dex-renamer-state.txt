@@ -1,0 +1,4 @@
+#Sun Jan 24 13:18:56 EST 2021
+base.0=C\:\\Users\\animeman\\Documents\\GitHub\\AdMobTutorial2\\android\\build\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
